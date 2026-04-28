@@ -15,7 +15,7 @@ career switch to Cloud / IAM Engineering.
 | Day | Date | Topics Covered | Status |
 |---|---|---|---|
 | Day 1 | April 2026 | Linux Basics + Navigation + File Commands | ✅ Done |
-| Day 2 | Upcoming | Text-Fu — stdout, stdin, pipes, grep | ⏳ Planned |
+| Day 2 | Upcoming | Text-Fu — stdout, stdin, pipes, tee | ✅ Done |
 | Day 3 | Upcoming | Permissions — chmod, chown | ⏳ Planned |
 
 ---
@@ -129,6 +129,50 @@ career switch to Cloud / IAM Engineering.
 
 ---
 
+## Day 2 — I/O Streams + Redirection + Pipes
+
+### What I Learned:
+- stdout → normal output (screen)
+- stdin → input to command
+- stderr → error output
+- > overwrites file
+- >> appends to file
+- < takes input from file
+- | (pipe) connects commands
+- tee → output to both screen and file
+
+---
+
+### Commands Practiced:
+
+| Command | What It Does | Example |
+|---|---|---|
+| > | Redirect output (overwrite) | echo Hello > file.txt |
+| >> | Append output | echo Hi >> file.txt |
+| < | Take input from file | cat < file.txt |
+| 2> | Redirect error | ls fake 2> error.txt |
+| 2>&1 | Combine stdout + stderr | ls fake > out.txt 2>&1 |
+| &> | Redirect both outputs | ls fake &> all.txt |
+| \| | Pipe output | ls \| less |
+| tee | Save + display output | ls \| tee file.txt |
+
+---
+
+### Hands-On Practice:
+- Created files using echo and >
+- Overwrote and appended content
+- Used < to copy content between files
+- Captured errors using 2>
+- Combined stdout and stderr
+- Used pipe with less
+- Used tee to store output
+
+---
+
+### Key Insight:
+- Linux commands become powerful when combined
+- Redirection gives control over data flow
+- Pipes allow chaining commands efficiently
 ---
 
 ## 📚 Resources I Am Using
