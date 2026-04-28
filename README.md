@@ -135,8 +135,8 @@ career switch to Cloud / IAM Engineering.
 - stdout → normal output (screen)
 - stdin → input to command
 - stderr → error output
-- > overwrites file
-- >> appends to file
+-  > overwrites file
+-  >> appends to file
 - < takes input from file
 - | (pipe) connects commands
 - tee → output to both screen and file
@@ -151,8 +151,8 @@ career switch to Cloud / IAM Engineering.
 | >> | Append output | echo Hi >> file.txt |
 | < | Take input from file | cat < file.txt |
 | 2> | Redirect error | ls fake 2> error.txt |
-| 2>&1 | Combine stdout + stderr | ls fake > out.txt 2>&1 |
-| &> | Redirect both outputs | ls fake &> all.txt |
+| 2>&1 | Redirect stderr to stdout | ls fake > out.txt 2>&1 |
+| &> | Redirect both stdout and stderr | ls fake &> all.txt |
 | \| | Pipe output | ls \| less |
 | tee | Save + display output | ls \| tee file.txt |
 
@@ -170,6 +170,7 @@ career switch to Cloud / IAM Engineering.
 ---
 
 ### Key Insight:
+- Understanding I/O streams is fundamental for automation and scripting
 - Linux commands become powerful when combined
 - Redirection gives control over data flow
 - Pipes allow chaining commands efficiently
