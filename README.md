@@ -134,13 +134,14 @@ career switch to Cloud / IAM Engineering.
 ## Day 2 — I/O Streams + Redirection + Pipes
 
 ### What I Learned:
+
 - stdout → normal output (screen)
 - stdin → input to command
 - stderr → error output
--  > overwrites file
--  >> appends to file
-- < takes input from file
-- | (pipe) connects commands
+- `>` → overwrites file
+- `>>` → appends to file
+- `<` → takes input from file
+- `|` (pipe) → connects commands
 - tee → output to both screen and file
 
 ---
