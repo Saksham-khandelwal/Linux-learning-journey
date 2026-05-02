@@ -16,7 +16,9 @@ career switch to Cloud / IAM Engineering.
 |---|---|---|---|
 | Day 1 | April 2026 | Linux Basics + Navigation + File Commands | ✅ Done |
 | Day 2 | Upcoming | Text-Fu — stdout, stdin, pipes, tee | ✅ Done |
-| Day 3 | Upcoming | Permissions — chmod, chown | ⏳ Planned |
+| Day 3 | April 2026 | env, cut, paste, head, tail | ✅ Done |
+| Day 4 | Upcoming | grep + filtering | ⏳ Planned |
+| Day 5 | Upcoming | Permissions — chmod, chown | ⏳ Planned |
 
 ---
 
@@ -147,14 +149,14 @@ career switch to Cloud / IAM Engineering.
 
 | Command | What It Does | Example |
 |---|---|---|
-| > | Redirect output (overwrite) | echo Hello > file.txt |
-| >> | Append output | echo Hi >> file.txt |
-| < | Take input from file | cat < file.txt |
-| 2> | Redirect error | ls fake 2> error.txt |
-| 2>&1 | Redirect stderr to stdout | ls fake > out.txt 2>&1 |
-| &> | Redirect both stdout and stderr | ls fake &> all.txt |
-| \| | Pipe output | ls \| less |
-| tee | Save + display output | ls \| tee file.txt |
+| `>` | Redirect output (overwrite) | `echo Hello > file.txt` |
+| `>>` | Append output | `echo Hi >> file.txt` |
+| `<` | Take input from file | `cat < file.txt` |
+| `2>` | Redirect error | `ls fake 2> error.txt` |
+| `2>&1` | Redirect stderr to stdout | `ls fake > out.txt 2>&1` |
+| `&>` | Redirect both outputs | `ls fake &> all.txt` |
+| `\|` | Pipe output | `ls \| less` |
+| `tee` | Save + display output | `ls \| tee file.txt` |
 
 ---
 
@@ -174,6 +176,59 @@ career switch to Cloud / IAM Engineering.
 - Linux commands become powerful when combined
 - Redirection gives control over data flow
 - Pipes allow chaining commands efficiently
+---
+
+## Day 3 — Environment Variables + Text Processing + File Inspection
+
+### What I Learned:
+- Environment variables store system/session information  
+- $VARIABLE is used to access variables  
+- env shows all environment variables  
+- PATH defines where commands are searched  
+- cut extracts specific parts of text  
+- paste merges lines/files  
+- head shows beginning of file  
+- tail shows end of file  
+- tail -f is used for real-time monitoring  
+
+---
+
+### Commands Practiced:
+
+| Command | What It Does | Example |
+|---|---|---|
+| env | Show all environment variables | env |
+| echo $VAR | Show variable value | echo $HOME |
+| export | Set variable (temporary) | export TEST=test |
+| cut | Extract text | cut -c 5 file.txt |
+| cut -f | Extract field | cut -f 2 file.txt |
+| cut -d | Custom delimiter | cut -d ";" -f 1 file.txt |
+| paste | Merge lines | paste file.txt |
+| paste -s | Combine into one line | paste -s file.txt |
+| paste -d | Change delimiter | paste -d ' ' -s file.txt |
+| head | Show first 10 lines | head file.txt |
+| head -n | Custom lines | head -n 5 file.txt |
+| tail | Show last 10 lines | tail file.txt |
+| tail -n | Custom lines | tail -n 5 file.txt |
+| tail -f | Real-time monitoring | tail -f file.txt |
+
+---
+
+### Hands-On Practice:
+- Viewed environment variables using env  
+- Created and accessed variables using export  
+- Extracted text using cut  
+- Merged lines using paste  
+- Viewed file start using head  
+- Monitored file changes using tail -f  
+
+---
+
+### Key Insight:
+- Environment variables control system behavior  
+- Text processing commands are powerful for handling data  
+- tail -f is used in real-time monitoring and debugging  
+
 ---
 
 ## 📚 Resources I Am Using
