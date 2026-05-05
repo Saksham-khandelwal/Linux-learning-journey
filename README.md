@@ -15,10 +15,11 @@ career switch to Cloud / IAM Engineering.
 | Day | Date | Topics Covered | Status |
 |---|---|---|---|
 | Day 1 | April 2026 | Linux Basics + Navigation + File Commands | ✅ Done |
-| Day 2 | Upcoming | Text-Fu — stdout, stdin, pipes, tee | ✅ Done |
-| Day 3 | April 2026 | env, cut, paste, head, tail | ✅ Done |
-| Day 4 | Upcoming | grep + filtering | ⏳ Planned |
-| Day 5 | Upcoming | Permissions — chmod, chown | ⏳ Planned |
+| Day 2 | April 2026 | Text-Fu — stdout, stdin, pipes, tee | ✅ Done |
+| Day 3 | May 2026 | env, cut, paste, head, tail | ✅ Done |
+| Day 4 | May 2026 | Text Processing + File Analysis (expand, join, split, sort, tr, uniq, wc, nl) | ✅ Done |
+| Day 5 | May 2026 | grep (Search & Filtering + Pipes) | ✅ Done |
+| Day 6 | Upcoming | Permissions — chmod, chown | ⏳ Planned |
 
 ---
 
@@ -88,7 +89,7 @@ career switch to Cloud / IAM Engineering.
 | `mkdir` | Create directory | `mkdir saksham` |
 | `mkdir -p` | Create nested directories | `mkdir -p saksham/dileep/veena` |
 | `rm` | Delete file permanently | `rm file.txt` |
-| `rm -rf` | Delete folder and contents — USE CAREFULLY | `rm -rf file1.txt/` |
+| `rm -rf` | Delete folder and contents — USE CAREFULLY | `rm -rf file1.txt` |
 
 ---
 
@@ -229,6 +230,99 @@ career switch to Cloud / IAM Engineering.
 - Environment variables control system behavior  
 - Text processing commands are powerful for handling data  
 - tail -f is used in real-time monitoring and debugging  
+
+---
+
+## Day 4 — Text Processing & File Analysis (Combined Learning)
+
+### What I Learned:
+- `expand` and `unexpand` manage tabs and spaces  
+- `join` combines files using common fields  
+- `split` breaks large files into smaller parts  
+- `sort` organizes data alphabetically or numerically  
+- `tr` translates or deletes characters  
+- `uniq` removes duplicate lines (requires sorting)  
+- `wc` counts lines, words, and bytes  
+- `nl` adds line numbers to files  
+
+---
+
+### Commands Practiced:
+
+| Command | What It Does | Example |
+|---|---|---|
+| `expand` | Tabs → spaces | `expand file.txt` |
+| `unexpand -a` | Spaces → tabs | `unexpand -a file.txt` |
+| `join` | Combine files | `join file1.txt file2.txt` |
+| `split -l` | Split by lines | `split -l 100 file.txt` |
+| `sort` | Sort lines | `sort file.txt` |
+| `sort -n` | Numeric sort | `sort -n file.txt` |
+| `tr` | Translate characters | `echo "hi" \| tr a-z A-Z` |
+| `tr -d` | Delete characters | `tr -d '0-9'` |
+| `uniq` | Remove duplicates | `sort file.txt \| uniq` |
+| `uniq -c` | Count duplicates | `sort file.txt \| uniq -c` |
+| `wc` | Count lines/words/bytes | `wc file.txt` |
+| `nl` | Add line numbers | `nl file.txt` |
+
+---
+
+### Hands-On Practice:
+- Converted tabs to spaces and vice versa  
+- Joined files using common fields  
+- Split large files into smaller chunks  
+- Sorted data alphabetically and numerically  
+- Transformed and cleaned text using `tr`  
+- Removed and counted duplicate entries  
+- Counted file contents using `wc`  
+- Added line numbers using `nl`  
+
+---
+
+### Key Insight:
+- Text processing commands are powerful when combined  
+- `sort + uniq` is essential for handling duplicates  
+- These tools are widely used in log analysis and automation  
+
+---
+
+## Day 5 — grep (Search & Filter Text)
+
+### What I Learned:
+- `grep` is used to search text in files
+- Can filter output based on patterns
+- Works with pipes for powerful data processing
+- Supports case-insensitive search and counting
+- Can match patterns using regular expressions
+
+---
+
+### Commands Practiced:
+
+| Command | What It Does | Example |
+|---|---|---|
+| `grep` | Search text in file | `grep "fox" file.txt` |
+| `grep -i` | Case-insensitive search | `grep -i "fox" file.txt` |
+| `grep -c` | Count matching lines | `grep -c "fox" file.txt` |
+| `grep -o` | Show only matched text | `grep -o "fox" file.txt` |
+| `grep -e` | Specify pattern | `grep -e "-v" file.txt` |
+| `grep -f` | Use patterns from file | `grep -f patterns.txt file.txt` |
+| `grep with pipe` | Filter command output | `env \| grep USER` |
+
+---
+
+### Hands-On Practice:
+- Searched for specific words in files
+- Performed case-insensitive searches
+- Counted number of matches
+- Extracted only matching text
+- Used grep with pipes for filtering output
+
+---
+
+### Key Insight:
+- `grep` is one of the most powerful Linux commands
+- Used heavily in log analysis and troubleshooting
+- Combining `grep` with pipes enables advanced data filtering
 
 ---
 
